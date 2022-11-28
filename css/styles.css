@@ -5,6 +5,7 @@
 *::after {
    box-sizing: border-box;
    font-family: 'Rubik', sans-serif;
+   transition: all .3s ease-out;
 }
 
 :root {
