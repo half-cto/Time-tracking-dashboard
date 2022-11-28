@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/styles.css">
-  <script src="./js/main.js"></script>
+  <script  src="./js/main.js" defer></script>
 
   <title>Time tracking dashboard</title>
 
@@ -16,11 +16,18 @@
   <main>
     <section class="board">
       <article class="board__hero-card">
-        <p>Report for</p>
-        <h1>Jeremy Robson</h1>
-        <h3 id="board__daily">Daily</h3>
-        <h3 id="board__weekly">Weekly</h3>
-        <h3 id='board__monthly'>Monthly</h3>
+        <div class="hero-card__info">
+          <img src="./images/image-jeremy.png" alt="profile picture">
+          <div>
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="hero-card__menu">
+          <h3 id="board__daily">Daily</h3>
+          <h3 id="board__weekly">Weekly</h3>
+          <h3 id='board__monthly'>Monthly</h3>
+        </div>
       </article>
       <article class="board__stat-card">
         <div class="board__stat-card__header work-header-bg"></div>
@@ -29,8 +36,8 @@
             <h3>Work</h3>
             <img src="./images/icon-ellipsis.svg" aria-hidden="true">
           </div>
-          <h2></h2>
-          <p></p>
+          <h2 class="board__stat-card__hours"></h2>
+          <p class="board__stat-card__timeframe"></p>
         </div>
       </article>
       <article class="board__stat-card">
@@ -40,8 +47,8 @@
             <h3>Play</h3>
             <img src="./images/icon-ellipsis.svg" aria-hidden="true">
           </div>
-          <h2></h2>
-          <p></p>
+          <h2 class="board__stat-card__hours"></h2>
+          <p class="board__stat-card__timeframe"></p>
         </div>
       </article>
       <article class="board__stat-card">
@@ -51,8 +58,8 @@
             <h3>Study</h3>
             <img src="./images/icon-ellipsis.svg" aria-hidden="true">
           </div>
-          <h2></h2>
-          <p></p>
+          <h2 class="board__stat-card__hours"></h2>
+          <p class="board__stat-card__timeframe"></p>
         </div>
       </article>
       <article class="board__stat-card">
@@ -62,8 +69,8 @@
             <h3>Exercise</h3>
             <img src="./images/icon-ellipsis.svg" aria-hidden="true">
           </div>
-          <h2></h2>
-          <p></p>
+          <h2 class="board__stat-card__hours"></h2>
+          <p class="board__stat-card__timeframe"></p>
         </div>
       </article>
       <article class="board__stat-card">
@@ -73,8 +80,8 @@
             <h3>Social</h3>
             <img src="./images/icon-ellipsis.svg" aria-hidden="true">
           </div>
-          <h2></h2>
-          <p></p>
+          <h2 class="board__stat-card__hours"></h2>
+          <p class="board__stat-card__timeframe"></p>
         </div>
       </article>
       <article class="board__stat-card">
@@ -84,8 +91,8 @@
             <h3>Self Care</h3>
             <img src="./images/icon-ellipsis.svg" aria-hidden="true">
           </div>
-          <h2></h2>
-          <p></p>
+          <h2 class="board__stat-card__hours"></h2>
+          <p class="board__stat-card__timeframe"></p>
         </div>
       </article>
     </section>
