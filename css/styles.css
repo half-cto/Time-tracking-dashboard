@@ -38,7 +38,7 @@
   
   /* * -------------------------- LAPTOP Font SIZES ------------------------ */
   
-  @media screen and (min-width: 37.5em) {
+  @media screen and (min-width: 40em) {
       :root {
           --fs-700: 2.5rem;       /* 40px */
           --fs-600: 3.5rem;       /* 48px */
@@ -85,16 +85,61 @@ img {
 
 /* * ========================= PAGE STYLES ====================== */
 
+
+
 .board {
     display: grid;
     width: min(100% - 3rem, 1110px);
     margin-inline: auto;
     gap: 1.5rem;
+    margin-block: 5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+    'hero'
+    'work'
+    'play'
+    'study'
+    'exercise'
+    'social'
+    'self';
 }
+
+@media screen and (min-width: 40em) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .board {
+        grid-template-areas: 
+        'hero work'  
+        'hero play'
+        'study exercise'
+        'social self' ;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    main {
+        height: 100vh;
+        min-height: 540px;
+    }
+
+    .board {
+        grid-template-areas: 
+        'hero work play study'
+        'hero exercise social self';
+    }
+}
+
+/* * ========================= HERO CARD ====================== */
+
 
 .board__hero-card {
     background-color: var(--clr-neutral-600);
     border-radius: 15px;
+    grid-area: hero;
 }
 
 .hero-card__info {
@@ -113,8 +158,18 @@ img {
     background-color: #FFF;
 }
 
-.hero-card__info > div > * {
-    margin: 0;
+@media screen and (min-width: 40em) {
+    .hero-card__info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+        padding: 2.5rem 2rem 4rem 2.5rem;
+    }
+
+    .hero-card__info > img {
+        width: 4.875rem;
+        border-radius: 40px;
+    }
 }
 
 .hero-card__info > div > p {
@@ -124,5 +179,116 @@ img {
 
 .hero-card__menu {
     display: flex;
+    padding-block: 1.5rem;
     justify-content: space-around;
+    color: var(--clr-neutral-500);
+}
+
+@media screen and (min-width: 40em) {
+    .hero-card__menu {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding-inline: 2rem;
+    }
+}
+
+.hero-card__menu > h3 {
+    cursor: pointer;
+}
+
+.active {
+    color: #FFF;
+}
+/* * ========================= STAT CARDS ====================== */
+
+.board__stat-card {
+    border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: top -.7rem right 1.5rem;
+
+}
+
+.board__stat-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: .375rem;
+    background-color: var(--clr-neutral-600);
+    border-radius: 15px;
+    margin-top: 2.375rem;
+    padding: 1.75rem 1.5rem;
+    cursor: pointer;
+}
+
+.board__stat-card__info:hover {
+    background-color: #33397A;
+}
+
+.stat-card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-card__head > img {
+    width: 21px;
+    height: auto;
+}
+
+.stat-card__head > img:hover {
+    filter: brightness(1.75);
+}
+
+.stat-card__time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 40em) {
+    .stat-card__time {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1.5rem;
+        gap: .5rem;
+    }
+}
+
+.stat-card__time > p {
+    color: var(--clr-neutral-400);
+}
+
+.work-header-bg {
+    background-color: var(--clr-light-orange);
+    background-image: url(../images/icon-work.svg);
+    grid-area: work;  
+}
+
+.play-header-bg {
+    background-color: var(--clr-soft-blue);
+    background-image: url(../images/icon-play.svg);
+    grid-area: play;
+}
+
+.study-header-bg {
+    background-color: var(--clr-light-red);
+    background-image: url(../images/icon-study.svg);
+    grid-area: study;
+}
+
+.exercise-header-bg {
+    background-color: var(--clr-lime-green);
+    background-image: url(../images/icon-exercise.svg);
+    grid-area: exercise;
+}
+
+.social-header-bg {
+    background-color: var(--clr-violet);
+    background-image: url(../images/icon-social.svg);
+    grid-area: social;
+}
+
+.self-care-header-bg {
+    background-color: var(--clr-yellow);
+    background-image: url(../images/icon-self-care.svg);
+    grid-area: self;
 }
