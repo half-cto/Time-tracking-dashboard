@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    /* * -------------------------- PAGE COLORS ------------------------ */   
+  
+      --clr-light-orange: hsl(15, 100%, 70%);
+      --clr-soft-blue: hsl(195, 74%, 62%);
+      --clr-light-red: hsl(348, 100%, 68%);
+      --clr-lime-green: hsl(145, 58%, 55%);
+      --clr-violet: hsl(264, 64%, 52%);
+      --clr-yellow: hsl(43, 84%, 65%);
+      
+      --clr-neutral-700: hsl(226, 43%, 10%);
+      --clr-neutral-600: hsl(235, 46%, 20%);
+      --clr-neutral-500: hsl(235, 45%, 61%);
+      --clr-neutral-400: hsl(236, 100%, 87%);
+      
+   /* * -------------------------- MOBILE Font SIZES ------------------------ */
+      
+      --fs-700: 1.5rem;       /* 24px */ 
+      --fs-600: 2rem;         /* 32px */
+      --fs-500: 1.125rem;     /* 18px */
+      --fs-400: .9375rem;     /* 15px */ 
+  
+      --lh-700: 1.75rem;      /* 28px */
+      --lh-600: 2.375rem;     /* 38px */
+      --lh-500: 1.3125rem;    /* 21px */
+      --lh-400: 1.125rem;     /* 18px */
+  }
+  
+  
+  /* * -------------------------- LAPTOP Font SIZES ------------------------ */
+  
+  @media screen and (min-width: 37.5em) {
+      :root {
+          --fs-700: 2.5rem;       /* 40px */
+          --fs-600: 3.5rem;       /* 48px */
+  
+          --lh-700: 3rem;         /* 48px */
+          --lh-600: 4.125rem      /* 66px */
+      }   
+  }
+
+body {
+    background-color: #0E1323;
+    color: #FFF;
+}
+
+h1 {
+    font-size: var(--fs-700);
+    line-height: var(--lh-700);
+    font-weight: 400;
+}
+
+h2 {
+    font-size: var(--fs-600);
+    line-height: var(--lh-600);
+    font-weight: 300;
+}
+
+h3 {
+    font-size: var(--fs-500);
+    line-height: var(--lh-500);
+    font-weight: 400;
+}
+
+p {
+    font-size: var(--fs-400);
+    line-height: var(--lh-400);
+    font-weight: 400;
+}
+
